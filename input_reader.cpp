@@ -4,7 +4,7 @@
 using namespace std;
 
 void enteredInteger(){
-    cout<<"You entered an Integer"
+    cout<<"You entered an Integer";
 }
 
 int main() {
