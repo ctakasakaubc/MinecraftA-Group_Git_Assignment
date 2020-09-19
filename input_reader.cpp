@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void enteredInteger(){
+    cout<<"You entered an Integer"
+}
+
 int main() {
 
     string userString; // will hold initial user input
