@@ -7,8 +7,12 @@ void enteredInteger(){
     cout<<"You entered an Integer";
 }
 
-void enteredString(){
-    cout<<"You entered a String";
+void enteredString(string test){
+    string reverse;
+    for(int i=test.length();i>=0;i--){
+        reverse.push_back(test[i]);
+    }
+    cout<<reverse;
 }
 
 int main() {
@@ -32,7 +36,7 @@ int main() {
     if(isInt){
         enteredInteger(); // called if the input is an integer
     }else{
-        enteredString(); // called if the input is a string
+        enteredString(userString); // called if the input is a string
     }
 
     return 0;
