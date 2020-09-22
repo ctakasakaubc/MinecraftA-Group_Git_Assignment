@@ -7,6 +7,10 @@ void enteredInteger(){
     cout<<"You entered an Integer";
 }
 
+void enteredString(){
+    cout<<"You entered a String";
+}
+
 int main() {
 
     string userString; // will hold initial user input
