@@ -3,8 +3,33 @@
 
 using namespace std;
 
-void enteredInteger(){
-    cout<<"You entered an Integer";
+void isPrime(int userNumber){
+    if(userNumber > 100){
+        cout << "Your number is too big to waste time figuring out if it's prime";
+    }else{
+        bool isPrime = true; // duh
+        int i; // factor iterator
+
+        if(userNumber == 0 || userNumber == 1)
+            isPrime = false;
+        else{
+            for(i = 2; i <= userNumber/2; i++){ // check factors up to userNumber/2
+                if(userNumber % i == 0){ // if mod of userNumber and factor is 0, then not prime for sure
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        if(isPrime)
+            cout << "That's a prime number right there";
+        else
+            cout << "That's no prime number";
+    }
+}
+
+void enteredInteger(int userNumber){
+    cout<<"You entered an Integer\n";
+    isPrime(userNumber);
 }
 
 void enteredString(string test){
@@ -28,13 +53,13 @@ int main() {
         int testNum = std::stoi(userString); // try to parse some integer from the user's string
         if(to_string(userNumber).length() == userString.length()){
             userNumber = testNum;
-            isInt = 1;
+            isInt = true;
         }
     }catch(...){}
 
     // isInt will be true if the user's input was an integer
     if(isInt){
-        enteredInteger(); // called if the input is an integer
+        enteredInteger(userNumber); // called if the input is an integer
     }else{
         enteredString(userString); // called if the input is a string
     }
