@@ -51,7 +51,7 @@ int main() {
     
     try{
         int testNum = std::stoi(userString); // try to parse some integer from the user's string
-        if(to_string(userNumber).length() == userString.length()){
+        if(to_string(testNum).length() == userString.length()){
             userNumber = testNum;
             isInt = true;
         }
